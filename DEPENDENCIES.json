@@ -1,0 +1,12 @@
+{
+  "modules/CalculatorApp.qml": "1740ef3bb477dbb56815b37a71b0b1a87b3d918b74a52704f2d62971d13f1680",
+  "modules/CalculatorPanel.qml": "b228f00e64c63a5ca096733946cd25bdc2e4340de01e86d67d7dfc5fed3bb661",
+  "components/CalculatorModel.qml": "81d20f286d3ed46b625587cd7c4eaf2f761c4b0bc95f6a402fd9fbcc4a39de7c",
+  "components/CalculatorEngine.js": "6bf0e40597fd601f8bc1b83b6d1fd5115d62c60bd9f6a9aed81fd7159e406d69",
+  "components/StationButton.qml": "169e6763d524bc06139ee0dfd0773837e561851f6758d75f612801029067edac",
+  "components/StationField.qml": "536aa7775e437ff49c235dcb25658c033d08540c31411998bdd9dfbee4d327ce",
+  "components/ChamferFrame.qml": "ed018420bd8ece29aba7e504d100c0a93433c0bca0d2918e37545788322ed208",
+  "tests/core/calculator_engine_test.js": "bbb46868c335d6daf1b69819da658fcbdf81f181a531e05d95134b81f3a24757",
+  "themes/palettes/cedar.json": "ed16337275337020fa9f710dc64de95139bca0b1e28ad224a77d6f9cb2128939",
+  "Theme.qml": "208a33edb055a60065faa1307f8d40f7a3047ba70fe25d6683a7e83aece72292"
+}

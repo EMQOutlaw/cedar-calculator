@@ -1,0 +1,21 @@
+name: Standalone calculator checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: node tests/core/calculator_engine_test.js components/CalculatorEngine.js
+      - run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - run: python3 -m compileall -q scripts tests
+      - run: sh -n launch.sh
+  qml:
+    runs-on: ubuntu-latest
+    container: archlinux:base
+    steps:
+      - run: pacman -Syu --noconfirm --needed git python quickshell qt6-declarative qt6-base
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python tests/check_calculator.py
+      - run: /usr/lib/qt6/bin/qmllint -I /usr/lib/qt6/qml Theme.qml shell.qml components/*.qml modules/*.qml
